@@ -3,7 +3,7 @@ adolescente, adulto, idoso) com base no valor fornecido, utilizando uma estrutur
 controle if-else.*/
 const prompt = require('prompt-sync') ();
 
-let age = Number(prompt("\nInforme a idade: "))
+let age = Number(prompt("Informe a idade: "))
 let ageRange = "";
     
 if(age >= 0 && age <= 12){

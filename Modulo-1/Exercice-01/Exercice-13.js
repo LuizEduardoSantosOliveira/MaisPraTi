@@ -6,11 +6,13 @@ const prompt = require('prompt-sync') ();
 let num = Number(prompt("Insira o primeiro numero: "));
 let counter = 0;
 let sum = 0;
+let avg = 0;
 
 while(num !==0){
     sum += num;
     counter++;
+    avg = sum/counter;
     num = Number(prompt("Insira outro numero: "));
 }
 
- console.log("A media aritmetica é", sum/counter) ;
+ console.log("A media aritmetica é", avg.toFixed(2)) ;
