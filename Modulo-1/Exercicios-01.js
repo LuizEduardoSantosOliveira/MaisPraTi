@@ -147,7 +147,7 @@ console.log(orderCrescent());*/
 
 
 
-    let num = Number(prompt("Informe um numero"));
+  /*  let num = Number(prompt("Informe um numero"));
 
     if(num %1 !== 0){
         console.log("O número precisa ser inteiro");
@@ -155,6 +155,74 @@ console.log(orderCrescent());*/
 
     for(let i = 0; i < 10; i++){
         console.log(num);
-    }
+    }*/
  
+/*function sumAll(){
+    
+    let sum = 0;
+    for(let i = 1; i <= 5; i++){
+        let num = Number(prompt(`Escreva o ${i} número: `));
+        sum += num;
+    }
+
+    return sum;
+}
+    
+
+console.log(sumAll());*/
+
+/*Crie um programa que exibe a tabuada de um número fornecido pelo usuário (de 1 a 10)
+ utilizando um loop for.*/
+ 
+/*let num = Number(prompt("Digite um número de 1 a 10 que queira saber a tabuada: "));
+let result = 0;
+for (let i = 1; i <= 10; i++) {
+    result = num * i;
+    console.log(`${num} x ${i} = ${result}`);
+ };*/
+
+ 
+    /*function  arithmeticAverage(){
+        let num = Number(prompt("Insira o primeiro numero: "));
+        let counter = 0
+        let sum = 0;
+    
+        while(num !==0){
+            sum += num;
+            counter++;
+            num = Number(prompt("Insira outro numero: "))
+        }
+    
+       return "A media aritmetica é", sum/counter
+    }
+    
+    console.log(arithmeticAverage());*/
+
+/*function factorial(){
+let num = Number(prompt("Digite um número: "));
+let result = 1;
+for (let i = 1; i <= num; i++) {
+  result *= i;
+}
+return `O fatorial de ${num}; é ${result}.`
+
+}
+
+console.log(factorial());*/
+
+function fibonacciSequence(){
+    let fibonacciSequence = [0, 1];
+    for (let i = 2; i < 10; i++) {
+        bonacciSequence.push(
+        fibonacciSequence[i - 1] + fibonacciSequence[i - 2]
+    );
+    }
+
+    return sequenciaFibonacci;
+}
+console.log(fibonacciSequence());
+ 
+
+
+
 
