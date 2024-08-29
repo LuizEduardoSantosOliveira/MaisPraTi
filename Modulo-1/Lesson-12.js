@@ -18,9 +18,9 @@
 
 
 
-//console.log(anime);
+console.log(anime);
 
-//console.log(anime.mostrarCaracteristicas());
+console.log(anime.mostrarCaracteristicas());
 
 let livro = {
     titulo:"O Hobbit",
