@@ -104,7 +104,7 @@ let pc = new computador("i9", "RTX4090", "16GB", "500GB SSD");
 //console.log(pc.mostrarEspecificacoes());
 
 function jogos(titulo, genero,anoLancamento, desenvolvedora, jogar){
-    return{
+    return {
         titulo,
         genero,
         anoLancamento,
