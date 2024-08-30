@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Página Principal</title>
+
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Web Development, HTML, CSS e JavaScript">
+    <meta name="author" content="Perna Longa">
+    <meta name="description" content="Este site trata de conteúdos introdutórios do desenvolvimento web">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+        h1{
+            color: blue;
+            font-size: 50px;
+        }
+
+        a{
+            
+            font-weight: bolder;
+            color: brown;
+            background-color: blue;
+            border: 5px dashed black;
+            
+        }
+
+        a:hover{
+            color: #fff;
+            text-decoration: none;
+            background-color: #6d6d6d;
+        }
+
+        a:link{
+            color: aqua;
+        }
+
+        a:visited{
+            color:orangered
+        }
+
+        a:active{
+            color: black;
+        }
+        p{
+            background-color: black;
+            color: #fff;
+            text-align: justify;
+            letter-spacing: normal;
+            word-spacing: 20px;
+            font-family: "Sevillana";
+        }
+
+        ul{
+            list-style: none;
+            border: 1px solid #6d6d6d;
+            margin-bottom: 100px;
+        }
+
+        li{
+            margin-bottom: 20px;
+        }
+
+        ol{
+            list-style:square;
+            border: 1px solid black;
+            padding-top: 10px;
+        }
+
+        table{
+            width:100%
+        }
+
+        th, td{
+            border: 2px solid darkgoldenrod;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        :root{
+    --color_green: #04D361;
+    --color_blue: #899BFF;
+    --color_red: #FF3E3E;
+    --color_dark: #0C0C0C;
+    --color_dark_200: #212529;
+    --color_gray: #AEAEAE;
+    --color_light: #F9F9F9;
+    --color_bg: #1A1A1A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color_bg);
+    color: var(--color_light);
+    font-family: Inter,sans-serif;
+}
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__logo a{
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--color_light);
+}
+.header__logo img{
+    height: 30px;
+}
+.btn{
+    width: 190px;
+    height: 60px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn__comprar{
+    background-color: transparent;
+    border: 2px solid var(--color_blue);
+    border-radius: 6px;
+    color: var(--color_light);
+    transition: all 0.5s ease;
+}
+
+.btn__comprar:hover{
+    background-color: var(--color_blue);
+}
+
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__content{
+    width: 600px;
+    height: auto;
+}
+
+.section__content h2{
+    font-family: Noto Sans, sans-serif;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.section__content h3{
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color:var(--color_blue);
+    font-weight: 400px;
+    margin-top: 20px;
+   
+}
+
+.section__content p{
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--color_gray);
+    margin-top: 30px;
+}
+
+label{
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color_gray);
+    padding-left: 2px;
+}
+
+form{
+    width: 600px;
+    height: auto;
+    margin-top:  20px;
+}
+
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input{
+    height : 60px;
+    border-radius: 4px;
+    background-color: var(--color_dark200);
+    border: 1px solid var(--color_dark_200);
+    color: var(--color_light);
+    font-size: 30px;
+    padding-left: 10px;
+}
+.btn__enviar{
+    width: 100%;
+    background-color: var(--color_blue);
+    color: var(--color_dark);
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+
+.btn__enviar:hover{
+    background-color: var(--color_green);
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__enviar{
+    min-width: 100vw;
+    height: 100vh;
+    background-color: #0C0C0C50;
+
+}
+
+.modal__content{
+    width: 800px;
+    height: 300px;
+    background-color: var(--color_dark);
+    border: 1px solid var(--color_dark_200);
+    border-radius: 4px;
+    color: var(--color_light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal__content p {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 20px;
+}
+
+.btn__fechar{
+    width: 600px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: var(--color_green);
+}
+
+.sucesso{
+    color: var(--color_green);
+}
+
+.erro{
+    color:var(--color_red)
+}
+
+.bg__sucesso{
+    background-color: var(--color_green);
+}
+
+.bg__erro{
+    background-color: var(--color_red);
+}
+
+.erro__nome, .erro_email{
+    line-height: 30px;
+}
+@media (max-width : 768px){
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .header{
+      width: 100%
+    }
+
+    .section__content{
+        width: 100vw;
+        padding-inline: 20px;
+    }
+
+    form{
+        width: 100%
+    }
+
+    footer{
+        width: 100%;
+        font-size: 16px;
+        padding-inline: 20px;
+        text-align: center;
+    }
+
+    .modal__content{
+        width: 90%;
+    }
+
+    .btn__fechar{
+        width: 90%;
+    }
+}
+
+@media (max-width : 480px){
+.header__logo a {
+    font-size: 20px;
+}
+
+.texto{
+    font-size: 50px;
+}
+
+
+.section__content h2{
+    font-size: 32px;
+}
+
+.section__content h3{
+    font-size: 22px;
+}
+
+.section__content p{
+    font-size: 20px;
+}
+footer{
+    font-size: 12px;
+}
+
+.modal__content{
+    width: 100%;
+    height: 100%;
+
+}
+
+.modal__content p {
+   font-size: 24px;
+}
+
+}
+@media (max-width : 320px){
+    .texto{
+        display: none;
+    }
+}
+
+@media (max-width : 320px){
+    .texto{
+        display: none;
+    }
+
+
+    .btn__comprar{
+        width: 160px ;
+    }
+
+    .section__content h2 {
+        font-size : 20 px
+    }
+
+    .section__content h3 {
+       display: none;
+    }
+
+    .section__content h2 {
+        font-size : 16px;
+        line-height: 26px;
+    }
+
+    .modal__content p {
+        font-size: 18px;
+     }
+}
+    </style>
+</head>
+
+<body>
+    
+    <nav>
+        <a href="https://www.google.com">Página Principal</a>
+        <a href="sobre-nos.html">Sobre nós</a>
+    </nav>
+
+    <hr>
+
+    <header>
+        <h1>Bem-vindo ao nosso site.</h1>
+        <h1>Bem-vindo ao nosso site.</h1>
+        <h2 style="color: red;">Bem-vindo ao nosso site.</h2>
+        <h3>Bem-vindo ao nosso site.</h3>
+    </header>
+
+    <hr>
+
+    <section>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum facilis praesentium itaque beatae omnis quam
+            sequi? Ullam vero ducimus earum at corporis commodi aperiam placeat, aliquam blanditiis! Voluptatibus,
+            pariatur non.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum facilis praesentium itaque beatae omnis quam
+            sequi? Ullam vero ducimus earum at corporis commodi aperiam placeat, aliquam blanditiis! Voluptatibus,
+            pariatur non.
+        </p>
+
+        <p>
+            Fórmula Química: H<sub>2</sub>O
+            Exemplo de expoente: x<sup>2</sup>
+        </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <p>Uma <abbr title="Application Programming Interface">API</abbr> permite que diferentes softwares se comuniquem.</p>
+        
+        <blockquote cite="https://www.google.com">
+            O Google é um navegador de desktop com excelente performance
+        </blockquote>
+
+        <p><cite>The Starry Night</cite> por Vincent Van Gogh. Pintada em 1889.</p>
+    
+        <p>A famosa citação da peça Hamlet de Shakespeare - <q>Ser ou não ser</q></p>
+        
+        <p>Este texto tem <strong>ênfase</strong> na palavra ênfase.</p>
+    
+        <p>Este texto tem <em>emphasis</em> na palavra ênfase.</p>
+
+        <p>Este texto tem uma palavra destaco <u>underline</u></p>
+        
+        <p>Este texto tem uma palavra <s>incorreta</s></p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Navegação do site</h3>
+        <ul>
+            <li>Página principal</li>
+            <li>Sobre nós</li>
+            <li>Newsletter</li>
+        </ul>
+
+        <h2>FAQ</h2>
+        <ol>
+            <li>O que é HTML</li>
+            <li>Como o CSS funciona?</li>
+            <li>Para que serve o JS?</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section>
+        <table>
+           <tr>
+                <th>Produto </th>
+                <th>Descrição </th>
+                <th>Preço </th>
+           </tr>
+
+           <tr>
+                <td>Notebook</td>
+                <td>Notebook Gamer com uma RTX 4870</td>
+                <td>R$ 1000</td>
+           </tr>
+
+           <tr>
+                <td>Playstation 5</td>
+                <td>Console super divertido da Sony</td>
+                <td>R$1200</td>
+           </tr>
+
+           <tr>
+            <td>Bicicleta</td>
+            <td>Caloi 10 fantástica</td>
+            <td>R$300</td>
+       </tr>
+        
+       <tr>
+            <td colspan="3">Total: R$2500</td>
+       </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section class="section__content">
+        <h2>Seja bem-vindo a sua melhor newsletter</h2>
+
+        <h3>Fique por dentro de todas as novidades</h3>
+
+        <p>Preencha os campos para receber noticas sobre progamação</p>
+
+       
+
+        <form action="">
+
+            <div class="inputs">
+                <label for="input__nome">Nome</label>
+                <input type="text"  id="input__nome"   class="input__nome" autofocus>
+                <span class="erro__nome erro"></span>
+               
+            </div>
+
+            <div class="inputs">
+                <label for="input__email">Email</label>
+                <input type="email"  id="input__email"  class="input__email">   
+            </div>
+            <span class="erro__email erro"></span>
+
+            <div class="buttons">
+                <button type="submit" class="btn btn__enviar">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <h2>Rodapé da página</h2>
+        &lt;Aprendendo HTML&gt;
+        <p>Desenvolvido por Luiz &copy;</p>
+    </footer>
+</body>
+<!-- Crie um arquivo HTML, head, header, nav, section, footer, parágrafos, listas e tabelas, Modifiquem a fonte do parágrafo. crie um formulário-->
+</html>
