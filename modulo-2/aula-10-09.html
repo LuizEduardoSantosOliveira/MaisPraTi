@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/form.css">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <!--Crie um formulário de cadastro para um site de e-commerce. O formulário deve conter os seguintes campos:
+
+    Nome completo (campo de texto)
+    Endereço de e-mail (campo de e-mail)
+    Senha (campo de senha)
+    Selecione seu país (menu dropdown)
+    Gênero (botões de rádio)
+    Aceitar os termos de serviço (checkbox)
+
+Estilize o formulário para que:
+
+    O botão de envio fique destacado ao passar o mouse (efeito hover).
+    O formulário tenha uma largura de 400px e esteja centralizado na tela.-->
+
+    <form >
+        <h1>Cadastro de eventos</h1>
+
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome">
+        <br>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <br>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="1234">
+        <br>
+
+
+        <label for="genero" class="radio">Genero</label>
+        <input class="radio" type="radio">Masculino
+        <input class="radio" type="radio">Feminino
+
+        <label  for="pais">País:</label>
+        <select  name="pais" id="pais">
+            <option value=""></option>
+            <option value="Brasil">Brasil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Uruguai">Uruguai</option>
+        </select>
+
+       
+
+        <label for="aceitar-termos">Aceitar os termos de serviço</label>
+        <input type="checkbox">
+        
+        
+        <button type="submit">Cadastrar</button>
+
+
+    </form>
+    
+</body>
+</html>
