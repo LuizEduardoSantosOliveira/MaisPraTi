@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Instruções para Configuração e Execução Local
 
 Siga os passos abaixo para configurar e executar o script localmente em sua máquina:
@@ -28,6 +28,3 @@ node nome-do-arquivo.js
 ```
 Onde `nome-do-arquivo.js` é o nome do arquivo que contém o código do exercício que deseja executar.
 =======
-
->>>>>>> cb94e8701c63aae4a1d98e16f256aeb9f916160c
-
