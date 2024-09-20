@@ -14,10 +14,10 @@ Se o Node.js não estiver não estiver instalado, você pode baixá-lo e instal�
 
 1. <strong>Clone o repositório:</strong> Clone este repositório em sua máquina local usando o comando:
 ```
-git clone https://github.com/luizEduardoSantosOliveira/MaisPraTi.git
+git clone https://github.com/LuizEduardoSantosOliveira/MaisPraTi.git
 ```
 2. <strong>Navegue até o diretório do projeto:</strong> Acesse o diretório do repositório clonado:
-```
+```a
 cd nome-do-repositorio
 ```
 ## Como Executar o script
