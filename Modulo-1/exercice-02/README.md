@@ -22,11 +22,6 @@ git clone https://github.com/luizEduardoSantosOliveira/MaisPraTi.git
 cd nome-do-repositorio
 ```
 ## Como Executar o script
-1. <strong>Instale as dependências: Este script utiliza o módulo prompt-sync para capturar entradas do usuário no terminal. Caso não esteja incluído no repositório, instale-o com:</strong> Execute o script com o comando:
-```
-npm install prompt-sync
-
-```
 
 2. <strong>Execute o script:</strong> Execute o script com o comando:
 ```
