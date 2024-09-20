@@ -17,7 +17,7 @@ Se o Node.js não estiver não estiver instalado, você pode baixá-lo e instal�
 git clone https://github.com/LuizEduardoSantosOliveira/MaisPraTi.git
 ```
 2. <strong>Navegue até o diretório do projeto:</strong> Acesse o diretório do repositório clonado:
-```
+```a
 cd nome-do-repositorio
 ```
 ## Como Executar o script
