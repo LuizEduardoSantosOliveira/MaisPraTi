@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # Instruções para Configuração e Execução Local
 
@@ -72,4 +71,4 @@ node nome-do-arquivo.js
 ```
 Onde `nome-do-arquivo.js` é o nome do arquivo que contém o código do exercício que deseja executar.
 =======
->>>>>>> 27a5a3c7317fa989ec31b215f50d4697d4896d15
+
