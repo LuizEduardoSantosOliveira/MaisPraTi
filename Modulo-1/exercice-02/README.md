@@ -14,17 +14,13 @@ Se o Node.js não estiver não estiver instalado, você pode baixá-lo e instal�
 
 1. <strong>Clone o repositório:</strong> Clone este repositório em sua máquina local usando o comando:
 ```
-git clone https://github.com/joelsonlins/MaisPraTi.git
+git clone https://github.com/luizEduardoSantosOliveira/MaisPraTi.git
 ```
 2. <strong>Navegue até o diretório do projeto:</strong> Acesse o diretório do repositório clonado:
 ```
 cd nome-do-repositorio
 ```
 ## Como Executar o script
-1. <strong>Instale as dependências:</strong> Este script utiliza o módulo `prompt-sync` para capturar entradas do usuário no terminal. Caso não esteja incluído no repositório, instale-o com:
-```
-npm install prompt-sync
-```
 2. <strong>Execute o script:</strong> Execute o script com o comando:
 ```
 node nome-do-arquivo.js
