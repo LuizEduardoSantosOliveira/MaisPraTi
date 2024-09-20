@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOM - Brownser object Model</title>
+    <script>
+        let myWindow;
+
+        function openWin(){
+            myWindow = window.open("", "myWindow", "width-200", "height-100");
+            myWindow.document.write("<p>nova janela aberta</p>");
+        }
+    </script>
 </head>
 <body>
-    
+    <button onclick="openWin()">Abrir janela</button>
+    <button onclick="closeWin()">Fechar  janela</button>
+    <button onclick="window.print()">Imprimir janela</button>
+
+    <button onclick="redirectTo('https://www.google.com')">Acessar google</button>
 </body>
 </html>
