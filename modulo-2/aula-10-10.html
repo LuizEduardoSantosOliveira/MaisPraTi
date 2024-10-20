@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    table {
+    overflow: auto;
+    width: 100%;
+}
+
+ table {
+    border: 1px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+ caption {
+    caption-side: top;
+    text-align: left;
+}
+
+ th {
+    border: 1px solid #000000;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+ td {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+} 
+
+aside{
+    width: 30%;
+}
+        body{
+            background-color: aquamarine;
+        }
+
+        header{
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .box{
+            width: 30%;
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+            margin: 10px;
+        }
+        @media  (max-width: 768px) {
+            .box{
+                width: 45%;
+            }
+
+            table th{
+                background-color: #333;
+                color: white;
+                border: 3px solid red;
+            }
+            aside{
+                width: 100%;
+            }
+            
+        }
+
+        @media  (max-width: 480px){
+            .box{
+                width: 20%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>layout responsivo</h1>
+        
+    </header>
+
+    <main class="container">
+        <div class="box">Caixa1</div>
+        <div class="box">Caixa2</div>
+        <div class="box">Caixa3</div>
+    </main>
+
+    <section>
+        <table>
+            <caption>Table 1</caption>
+            <thead>
+                <tr>
+                    <th>Comidas</th>
+                    <th>Bebidas</th>
+                    <th>Sobremessa</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Salgado</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <aside>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit animi voluptas commodi dignissimos! Nulla, neque!</p>
+    </aside>
+</body>
+</html>
