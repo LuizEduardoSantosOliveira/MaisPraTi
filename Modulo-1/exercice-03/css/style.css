@@ -87,7 +87,7 @@ h1{
 }
 
 .menu img.logo-ordem {
-    height: 80px; /* Ajuste conforme necessário */
+    height: 80px; 
 }
 
 .menu ul li{
@@ -175,12 +175,11 @@ h1{
 }
 .cards-temporadas {
     display: flex;
-    flex-wrap: wrap; /* Permite quebrar linha */
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: center;
-    margin-right: 150px; /* Pode ser ajustado */
-    padding: 40px; /* Adiciona algum espaçamento interno */
-
+    margin-right: 150px; 
+    padding: 40px; 
 }
 
 .cards-temporadas img {
@@ -191,9 +190,9 @@ h1{
 .cards-temporadas h1 {
     padding-right: 500px;
     font-size: 1.5em;
-    line-height: 1.2; /* Ajuste para melhor espaçamento */
+    line-height: 1.2; 
     text-transform: uppercase;
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
 }
 
  .card-1, .card-2, .card-3, .card-4, .card-5, .card-6, .card-7{
