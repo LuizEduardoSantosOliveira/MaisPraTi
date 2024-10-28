@@ -32,10 +32,12 @@
 html{
     font-size: 62.5;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body{
     position: relative;
+    background-color: #2f6ff3;
     
 }
 
@@ -79,7 +81,7 @@ header h1{
     transition: .2s;
 
 }
-.navbar ul li .active,
+.navbar ul li,
 .navbar ul li a:hover{
     color: var(--color_white_light);
 
@@ -154,34 +156,37 @@ header h1{
 
 .swiper {
     width: 100%;
-    height: 100%;
-    
-  }
+    height: auto; /* Altere para auto para melhor responsividade */
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
-    font-size: 18px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 25em;
-    transition: all 0.5s ease-out 0.5s ease;
-  }
+    padding-left: 30em;
+}
 
-  .swiper-slide .box {
-    display: block;
-    width: 100%;
-    height: 100%;
+.swiper-slide .box {
+    display: flex; /* Altere para flex para centralizar o conteúdo */
+    flex-direction: column; /* Alinhe verticalmente */
     justify-content: center;
     align-items: center;
-  }
+    width: 100%; /* Mantenha a largura em 100% para responsividade */
+    max-width: 300px; /* Defina uma largura máxima para as caixas */
+    height: auto; /* Defina altura como auto para manter a proporção */
+    margin: 0 auto; /* Centralize horizontalmente */
+}
 
-.box-container .swiper-button-next{
+
+
+
+ .swiper-button-next{
     color: #b42b2b;
     padding-right: 25em;
 }
 
-.box-container .swiper-button-prev{
+ .swiper-button-prev{
     color: #b42b2b;
     padding-left: 28.5em;
 }
@@ -191,9 +196,9 @@ header h1{
     justify-content: center;
     color: var(--color_red_light);
     flex-wrap: wrap;
-}
 
-.home .box-container .box{
+}
+.home .box{
     height: 20rem;
     width: 25rem;
     background-color: var(--color_white_light);
@@ -205,7 +210,7 @@ header h1{
     border: 10px solid black;
 }
 
-.home .box-container .box i{
+.home  .box i{
     height: 6rem;
     width: 6rem;
     line-height: 6rem;
@@ -217,32 +222,106 @@ header h1{
     transition: 0.2s;
 }
 
-.home .box-container .box i:hover{
+.home  .box i:hover{
     background-color: var(--color_red_light);
 }
 
 
 
-.home .box-container .box h3{
+.home  .box h3{
     font-size: 2rem;
     color: var(--color_red_light);
     transition: 0.2s;
 }
 
-.home .box-container .box h3:hover{
+.home  .box h3:hover{
     color: var(--primary-dark)
 }
 
-.home .box-container .box p{
+.home  .box p{
     font-size: 1.3rem;
     color: var(--secodary-dark);
+}
+
+.cards-mobile{
+    display: none;
+   
+}
+
+
+
+.about .heading{
+    font-size: 4rem;
+    color: var(--color_white_normal);
+    text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+
+.title{
+    padding: 0 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--color_white_dark);
+}
+
+.about .row{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.about .row .image{
+    height: 50vh;
+    width: 20vh;
+    display: flex;
+}
+
+.about .row .content{
+    padding-left: 3rem;
+}
+
+.about .row .content h3{
+    font-size: 2rem;
+    color: var(--color_white_normal);
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.about .row .content p{
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color_white_dark);
+    padding: 0 10rem 0 10rem;
+    text-align: justify;
+}
+
+.about .row .content button{
+    height: 4rem;
+    width: 25rem;
+    background-color: var(--secondary);
+    color: var(--color_white_normal);
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .3);
+    cursor: pointer;
+    font-size: 2rem;
+    transition: .2s;
+    margin:  1rem 0 0 20rem ;
+}
+.about .row .content button:hover{
+    letter-spacing: .5rem;
 }
 
 @media (max-width:768px){
     html{
         font-size: 50%;
     }
-
+    
     .fa-bars, .menu-button{
         display: block;
         background-color: transparent;
@@ -252,16 +331,17 @@ header h1{
     }
 
     header h1{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 20rem;
-        font-size: 2rem;
+        padding-left: 40rem;
+        font-size: 3rem;
+    }
+
+    .logo{
+        display: none;
     }
     
 
     .navbar{
-        padding: 1.5rem 4 rem;
+        padding: 1.5rem 4rem;
     }
 
     .navbar li{
@@ -300,7 +380,6 @@ header h1{
     .menu-mobile ul li a {
         display: block; 
         width: 100%; 
-        padding: 1rem; 
         color: var(--color_red_light);
         transition: 0.2s;
         background-color: var(--secodary-dark);
@@ -325,7 +404,118 @@ header h1{
     .close{
         display: none;
     }
-   
+
+    #slide-1{
+        display: none;
+    }
+    #slide-2{
+        display: none;
+    }
+    #slide-3{
+        display: none;
+    }
+    #slide-4{
+        display: none;
+    }
+  
+    .cards-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+       
+    }
+    
+    .about .row{
+        flex-direction: column;
+    }
+    .about .row .image{
+      display: none;
+    }
+    .about .row .content p{
+        padding: 0 2.5rem;
+    }
+    .about .row .content button{
+        margin-left: 15em;
+    }
+    .about .heading{
+        font-size: 7em;
+    }
+    .about .title{
+        font-size: 4em;
+    }
+
+    .about .row .content h3{
+        font-size: 3em;
+    }
 }
+@media (max-width:480px) {
+
+        header h1{
+            padding-left: 20rem;
+            font-size: 3rem;
+            
+        }
+        .home .content h1{
+            font-size: 4em;
+            margin-top: 1em;
+        }
+
+        .menu-mobile ul li a {
+            font-size: 4rem;  
+        }
+
+        .home .home-button{
+            background-color: #b42b2b;
+        }
+
+    
+
+       .cards-mobile .box {
+            height: 40rem;
+            width: 40rem;
+            background-color: var(--color_white_light);
+            text-align: center;
+            border-radius: 2rem;
+            box-shadow: 0 .3rem .5 rgba(0, 0, 0, .3);
+            margin-top:  2rem;
+            cursor: pointer;
+            border: 10px solid black;
+        
+       }
+
+       .cards-mobile .box p{
+            padding: 1em 1em 0 1em;
+            text-align: justify;
+            font-size: 20px;
+       }
+
+       .cards-mobile .box h3{
+        font-size: 4em;
+       }
+        
+       .about .heading{
+        font-size: 10em;
+        
+    }
+
+    .about .title{
+        display: none;
+    }
+    .about .row .content h3{
+        font-size: 3em;
+        padding: 0 .2em;
+    }
+    .about .row .content p{
+        font-size: 2.5rem;
+        padding-left: 1em;
+    }
+
+    .about .row .content button{
+        margin-left: 5em;
+    }
+        
+      }
+   
 
 
