@@ -53,6 +53,7 @@ header{
 
 }
 
+
 header h1{
     color: var(--color_red_light);
     font-size: 1.2rem;
@@ -79,11 +80,16 @@ header h1{
     font-size: 1.2em;
     color: var(--color_red_light);
     transition: .2s;
+   
 
+}
+a{
+    text-decoration: none;
 }
 .navbar ul li,
 .navbar ul li a:hover{
     color: var(--color_white_light);
+    
 
 }
 
@@ -182,13 +188,11 @@ header h1{
 
 
  .swiper-button-next{
-    color: #b42b2b;
-    padding-right: 25em;
+  display: none;
 }
 
  .swiper-button-prev{
-    color: #b42b2b;
-    padding-left: 28.5em;
+   display: none;
 }
 
 .home .box-container{
@@ -317,6 +321,143 @@ header h1{
     letter-spacing: .5rem;
 }
 
+
+
+
+.teachers .heading{
+    display: flex;
+    color: var(--color_white_light);
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.teachers .title{
+    display: flex;
+    color: var(--color_white_light);
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.teachers .card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.teachers .card-container .card{
+    padding: 2rem;
+    margin: 2rem;
+    background-color: var(--color_white_normal);
+    text-align: center;
+    width: 28rem;
+    box-shadow: 0 .3rem  .5rem rgba(0, 0, 0, .3);
+}
+
+.teachers .card-container .card img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale();
+
+}
+
+.teachers .card-container .card img:hover{
+    filter:contrast()
+}
+
+.teachers .card-container .card h3{
+    color: var(--color_red_dark);
+    font-size: 2rem;
+    padding: .5rem 0;
+    
+}
+
+.teachers .card-container .card p{
+    font-size: 1.7rem;
+    color: var(--secodary-dark)
+
+}
+
+.teachers .card-container .card .icons a{
+    font-size: 1.9rem;
+    padding: 1.5rem .5rem;
+    color: var(--color_red_dark);
+}
+
+.teachers .card-container .card .icons a:hover{
+    color: var(--secondary)
+
+}
+
+.course .heading{
+    display: flex;
+    color: var(--color_white_light);
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;  
+}
+.course .box-container{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.course .box-container .box{
+    height: 18rem;
+    width: 25rem;
+    margin:3.5rem 2rem ;
+    text-align: center;
+    box-shadow: .3rem .3rem 0 .1rem var(--color_red_dark),
+                .5rem .5rem .5rem rgba(0, 0, 0, .3);
+    background-color: var(--color_white_dark);
+}
+
+.course .box-container .box i{
+    height: 10rem;
+    width: 10rem;
+    font-size: 5rem;
+    line-height: 10rem;
+    text-align: center;
+    color: var(--color_red_dark);
+    border-radius: 50%;
+    background-color: var(--secondary);
+    margin-top:  -20rem;
+
+}
+.course .box-container .box h3{
+    font-size: 2rem;
+    color: var(--color_red_dark);
+
+}
+
+.course .box-container .box p{
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+
+}
+
+#testemunhos {
+    margin: 20px;
+}
+
+.comment-container {
+    margin-top: 10px;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 @media (max-width:768px){
     html{
         font-size: 50%;
@@ -448,6 +589,14 @@ header h1{
     .about .row .content h3{
         font-size: 3em;
     }
+
+    .teachers .card-container{
+        margin: 0 1rem;
+    }
+
+    .course .box-container{
+        width: 100%;
+    }
 }
 @media (max-width:480px) {
 
@@ -514,8 +663,37 @@ header h1{
     .about .row .content button{
         margin-left: 5em;
     }
+    .teachers .card-container .card h3{
+        font-size: 4rem;
+        padding: .5rem 0;
         
-      }
+    }
+    
+    .teachers .card-container .card p{
+        font-size: 3rem;
+    
+    }
+    
+    .teachers .card-container .card .icons a{
+        font-size: 4rem;
+        padding: 1.5rem .5rem;
+    }
+
+    .course .box-container .box h3{
+        font-size: 3rem;
+        color: var(--color_red_dark);
+    
+    }
+    
+    .course .box-container .box p{
+        font-size: 1.8rem;
+        text-align: justify;
+        padding: 0 0.5rem;
+        color: var(--primary-dark);
+    
+    }
+
+}
    
 
 

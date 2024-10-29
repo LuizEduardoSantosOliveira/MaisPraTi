@@ -6,6 +6,7 @@
     <script src="https://kit.fontawesome.com/67492479d6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <title>InovaCursos</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
             <!--<a href="#" class="logo"><img src="img/Inova Cursos.png" alt=" Logo da empresa InovaCursos"></a>!-->
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#Sobre">Sobre</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#professores">Professores</a></li>
                 <li><a href="#cursos">Cursos</a></li>
                 <li><a href="#testemunhos">Testemunhos</a></li>
@@ -78,8 +79,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
@@ -127,8 +126,118 @@
         </section>
 
 
-        <section class="teachers" id="Professores">
+        <section class="teachers" id="professores">
+            <h1 class="heading">Nossos Professores</h1>
+            <h3 class="title">conheça nossos profissionais</h3>
+
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/professor-1.jpg" alt="">
+                    <h3>Nome</h3>
+                    <p>Eu amo ensinar</p>
+                    <div class="icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-github"></a>
+                    </div>
+                </div>
+                
             
+                <div class="card">
+                    <img src="img/professor-2.jpg" alt="">
+                    <h3>Nome</h3>
+                    <p>Eu amo ensinar</p>
+                    <div class="icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-github"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/professor-3.jpg" alt="">
+                    <h3>Nome</h3>
+                    <p>Eu amo ensinar</p>
+                    <div class="icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-github"></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="img/professor-4.jpg" alt="">
+                    <h3>Nome</h3>
+                    <p>Eu amo ensinar</p>
+                    <div class="icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-github"></a>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+        <section class="course" id="cursos">
+            <h1 class="heading">Nossos cursos</h1>
+            <h3 class="title">Melhore suas proeficiências com os nossos novos cursos</h3>
+            <div class="box-container">
+                <div class="box">
+                    <i class="fab fa-html5"></i>
+                    <h3>html</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, illo!</p>
+                </div>
+    
+                <div class="box">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>Css3</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, illo!</p>
+                </div>
+    
+                <div class="box">
+                    <i class="fab fa-js-square"></i>
+                    <h3>Javascript</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, illo!</p>
+                </div>
+    
+                <div class="box">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, illo!</p>
+                </div>
+    
+                <div class="box">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Seo Marketing</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, illo!</p>
+                </div>
+    
+                <div class="box">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Graphic design</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, illo!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="review" id="testemunhos">
+            <h1 class="heading">Nossos cursos</h1>
+            <h3 class="title">Melhore suas proeficiências com os nossos novos cursos</h3>
+
+            <div class="box-container">  
+                <div class="box">
+                    <h1 class="heading">Testemunhos de Clientes</h1>
+                    <div id="loading">Carregando depoimentos...</div>
+                    <div id="comment" class="comment-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testemunhos">
+           
         </section>
     </main>
 
@@ -140,10 +249,9 @@
 
 
 
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>    
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src=".js/script.js"></script>
+<script type="module" src=".js/script.js"></script>
 </body>
 </html>
