@@ -1,6 +1,8 @@
 {
-  "dependencies": {
-    "@supabase/supabase-js": "^2.46.0",
-    "prompt-sync": "^4.2.0"
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
