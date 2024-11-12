@@ -15,8 +15,11 @@ cd nome-do-repositorio
 ### CRUD
 
  1.<strong>Criar</strong> através do botão "adicione uma tarefa" é possivel criar tarefas
+ <br>
  2.<strong>Ler </strong> O Projeto mostra as tarefas adicionadas
+ <br>
  3.<strong>Atualizar</strong>Através do icon de edição é possivel alterar uma tarefa ja existente
+ <br>
 4.<strong>Deletar</strong>Através do icon de deletar é possivel remover uma tarefa ja listada
 
 
