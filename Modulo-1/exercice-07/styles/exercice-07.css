@@ -1,0 +1,9 @@
+.postLoad button{
+    background-color: gray;
+    font-size: 50px;
+    border-radius: 20px;
+}
+
+.postLoad button:hover{
+    background-color: red;
+}

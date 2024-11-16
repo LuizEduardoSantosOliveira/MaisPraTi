@@ -1,0 +1,22 @@
+.randonColor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.randonColor button {
+    background-color: black;
+    font-size: 30px;
+    font-weight: 500;
+    transition: .10s ease-in-out;
+  }
+
+  .randonColor h1 {
+    color: black;
+  }
+  
+   .randonColor button:hover {
+    color: #fff;
+    background-color: red;
+  }

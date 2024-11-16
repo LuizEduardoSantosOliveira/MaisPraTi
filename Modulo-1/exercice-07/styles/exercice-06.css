@@ -1,0 +1,28 @@
+.nameForm label,input{
+    height: 2rem;
+    width:50%;
+    border: none;
+    padding: 0 1rem;
+    border-radius: 5rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    transition: .2s linear;
+
+}
+.nameForm button {
+    width: 30%;
+    border: 5px solid black;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.2s;
+    border-radius: 5rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white; 
+  }
+  
+  .nameForm button:hover {
+    letter-spacing: 1rem;
+    background-color: #45a049; 
+    border-color: #4CAF50; 
+  }

@@ -1,0 +1,87 @@
+/* Estilo da galeria */
+.gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-image {
+    width: 150px; /* Imagens pequenas na galeria */
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilo do modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .modal-image {
+    width: 100%; /* Imagem do modal ocupa toda a largura disponível */
+    height: auto;
+    display: block;
+    max-height: 80vh; /* Limita a altura da imagem para não sair da tela */
+  }
+  
+  /* Botões de navegação e fechar */
+  .close-btn  {
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  
+  .close-btn {
+    right: 20px;
+    margin-bottom: 50px;
+    
+  }
+  
+  .nav-btn {
+   margin-right:  100px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  

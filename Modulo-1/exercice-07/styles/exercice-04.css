@@ -1,0 +1,24 @@
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timer p{
+    font-size: 60px;
+}
+
+
+.button-btn-start{
+    background-color: green;
+    font-size: 30px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.button-btn-stop{
+    background-color: red;
+    font-size: 30px;
+    width: 100px;
+}

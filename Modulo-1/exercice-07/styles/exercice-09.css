@@ -1,0 +1,33 @@
+.countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.countdown p{
+    font-size: 60px;
+}
+
+
+.countdown .button-btn-start{
+    background-color: green;
+    font-size: 20px;
+    width: 100px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.countdown .button-btn-pause{
+    background-color: red;
+    font-size: 20px;
+    width: 100px;
+    color: black;
+}
+
+.countdown .button-btn-restart{
+    background-color:yellow;
+    font-size: 20px;
+    width: 100px;
+    color: black;
+}

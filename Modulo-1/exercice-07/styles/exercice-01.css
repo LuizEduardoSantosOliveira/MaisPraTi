@@ -1,0 +1,22 @@
+.count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.count p{
+   font-size: 50px;  
+}
+.count button {
+    background-color: black;
+    font-size: 30px;
+    font-weight: 500;
+    color: #646cff;
+    transition: .10s ease-in-out;
+  }
+  
+   .count button:hover {
+    color: #fff;
+    background-color: red;
+  }

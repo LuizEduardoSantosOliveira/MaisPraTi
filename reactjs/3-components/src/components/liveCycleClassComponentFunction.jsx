@@ -15,11 +15,14 @@ function liveCycleClassComponentFunciton(){
         setCount(count + 1)
     ]
 
+  
+   
+
    
         return(
             <div>
             <p>Contagem: {this.state.count}</p>
-            <button onClick={this.incrementCount}>Incrementar</button>
+            <button onClick={increment}>Incrementar</button>
             </div>
         )
     
