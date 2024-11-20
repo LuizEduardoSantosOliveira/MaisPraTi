@@ -14,7 +14,8 @@ body {
     font-family: "Roboto", sans-serif;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
+    
+    
 }
 
 header {
@@ -26,7 +27,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 20;
 }
 
@@ -45,7 +45,7 @@ header {
 .nav {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .nav li {
@@ -68,13 +68,13 @@ header {
 
 .search {
     position: relative;
-    width: 130px;
+    width: 5em;
     height: 40px;
     transition: 0.5s;
 }
 
 .search:hover {
-    width: 300px;
+    width: 10em;
 }
 
 .search input {
@@ -101,6 +101,10 @@ header {
 .swiper {
     width: 100%;
     height: 100vh;
+}
+
+.swiper .swiper-slide{
+    margin-top: 120px;
 }
 
 .swiper .swiper-wrapper {
@@ -130,8 +134,7 @@ header {
     /* position: absolute; */
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    
 }
 
 .swiper .swiper-wrapper .swiper-slide .banner {
@@ -139,8 +142,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -148,41 +149,57 @@ header {
 
 .swiper .swiper-wrapper .swiper-slide .banner img {
     position: absolute;
-    max-width: 700px;
+    max-width: 600px;
+    height: 550px;
     transform: translateX(-50%);
     z-index: 1;
     left: 50%;
 }
 
-.swiper .swiper-button-prev {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 50%;
-    left: 60%;
-    z-index: 100;
+.swiper .swiper-wrapper .swiper-slide .banner .pokemon{
+    margin-top: 6em;
 }
 
-.swiper .swiper-button-next{
-    position: absolute;
-    height: 70%;
-    top: 50%;
-    width: 60px;
-    z-index: 100;
-    background-color: blue;
-    line-height: 0;
-    background: transparent;
-    border-radius: 50%;
+.swiper .swiper-wrapper .swiper-slide .banner .mario{
+    margin-top: 6em;
+    
 }
-.swiper .swiper-button-next::after,
-.swiper .swiper-button-prev::after {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 50%;
-    left: 60%;
-    z-index: 100;
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;  /* Deve ser absoluta para controle preciso da posição */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    color: red;
 }
+
+.swiper-button-prev {
+    margin-left: 43rem;  
+}
+
+/* Botão próximo */
+.swiper-button-next {
+    margin-right: 4rem;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: red;
+    margin-top: 10em;
+
+}
+
+/* Hover */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #fff;  /* Cor ao passar o mouse */
+}
+
+
 
 .right {
     max-height: 70vh;
@@ -211,7 +228,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 5rem
 }
 
 .banner .left .features .rating .score {
@@ -257,7 +274,7 @@ header {
 
 .banner h1 {
     color: #ffffff;
-    font-size: 5em;
+    font-size: 3em;
     letter-spacing: 5px;
     line-height: 0.9;
     z-index: 10;
@@ -266,7 +283,8 @@ header {
 
 .swiper .swiper-wrapper .swiper-slide .banner .right {
     position: relative;
-    height: 100vh;
+    margin-top: 1.5rem;
+    padding-left: 12rem;
     max-width: 450px;
     display: flex;
     flex-direction: column;
@@ -276,12 +294,13 @@ header {
 }
 
 .banner .right .description {
-    padding: 30px 60px 0 0;
+    
     color: #ffffff;
 }
 
 .banner .right .description li {
     list-style: none;
+    
 }
 
 .banner .right .description h4 {
@@ -301,18 +320,482 @@ header {
 
 .banner .right h2 {
     color: #ffffff;
-    font-size: 3.5em;
+    font-size: 2em;
     line-height: 1em;
     font-weight: 400;
     text-align: right;
-    margin-bottom: 20px;
     text-transform: uppercase;
 }
-
 .banner .right iframe {
     max-width: 450px;
     max-height: 250px;
+    margin-top: 30px;
 }
+
+.menu-mobile{
+    display: none;
+}
+ .menu-button{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .swiper-button-prev {
+        margin-left: 35rem;
+    }
+
+    .swiper-button-next {
+        margin-right: 3rem;
+    }
+
+
+    .logo img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+        
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+       overflow: auto;
+    }
+
+
+
+    /* Botão do menu móvel */
+    .menu-button {
+        margin-bottom: 10px;
+    }
+
+    /* Menu de navegação */
+    .menu-mobile {
+        display: none; /* Menu escondido por padrão */
+        width: 100%;
+        position: fixed;
+        top: 60px; /* Ajuste a posição conforme necessário */
+        left: 0;
+        margin-top: 1rem;
+        background-color: #000;
+        z-index: 100; /* Certifique-se de que o menu está na frente */
+    }
+    
+    .menu-mobile.open {
+        display: block; /* Exibe o menu quando a classe 'open' é adicionada */
+    }
+    
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 1em;
+        list-style: none;
+    }
+    
+    .menu-mobile ul li {
+        width: 100%;
+        text-align: center;
+        margin: 1em 0;
+
+    }
+    
+    .menu-mobile ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 10px;
+        transition: color 0.2s;
+    }
+    
+    .menu-mobile ul li a:hover {
+        color: var(--primary); /* Muda para a cor principal ao passar o mouse */
+    }
+
+
+    .banner {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .banner .left
+     {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Features ajustadas */
+    .banner .left .features {
+        margin-bottom: 20px;
+    }
+
+    .banner h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        display: none;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 2em;
+        margin-right: -1em;
+        margin-left: 1em;
+        
+      }
+
+      .search{
+        border: #000 solid 1px;
+        padding-left: 5em;
+       
+      }
+
+      .login{
+        display: none;
+      }
+
+      
+
+    .swiper .swiper-slide {
+        margin-top: 80px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        max-height: 500px;
+        max-width: 400px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .mario{
+        margin-top: 20em;
+        
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .pokemon{
+        margin-top: 30em;
+        
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .zelda{
+        margin-top: 20em;
+        
+    }
+
+
+    .banner .left .features .pricing h4{
+        margin-right: 1em;
+    }
+
+    .banner .left .features .pricing .subtitle{
+        font-size: 2em;
+    }
+
+    .banner .right iframe {
+        max-width: 300px;
+        max-height: 200px;
+        margin-left: 5em;
+        display: flex;
+        flex-direction: column;
+        
+    }
+}   
+
+
+@media only screen and (max-width: 480px) {
+    header {
+        background-color: #ff0000;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        overflow: auto;
+    }
+
+    body{
+        overflow: auto;
+    }
+
+    
+
+    .logo img {
+        max-width: 35px;
+        max-height: 35px;
+    }
+
+    .logo{
+        margin-left: -5em;
+        margin-right: 2em;
+        margin-bottom: 1em;
+        max-width: 30px;
+        max-height: 30px;
+      }
+
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+   
+    
+
+    .swiper-button-prev {
+        margin-left: 1rem;
+    }
+
+    .swiper-button-next {
+        margin-right: 1rem;
+    }
+
+    .swiper .swiper-slide {
+        margin-top: 60px;
+    }
+
+    .banner {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .banner .left
+     {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        max-height: 150px;
+        max-width: 150px;
+        display: none;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .mario{
+        margin-top: -3em;
+        
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .pokemon{
+        margin-top: 0em;
+        
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .zelda{
+        margin-top: 0em;
+        
+    }
+    
+
+    .swiper .swiper-wrapper .swiper-slide .banner .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .banner .left .features {
+        max-width: 400px;
+        margin-bottom: 100px;
+        flex-direction: column;
+    }
+    
+    .banner .left .features .rating {
+        color: #ffffff;
+        /*display: none;*/
+        justify-content:center;
+        align-items: center;
+        margin-bottom: 5rem
+        
+    }
+    
+    .banner .left .features .rating .score {
+        padding: 15px;
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--primary);
+        background:#ffffff;
+        margin-top: 2em
+    }
+
+    
+    .banner .left .features .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .banner .left .features .content .subtitle{
+        font-size: 10em;
+        margin-top: 6em;
+    }
+    
+    .banner .left .features .pricing {
+        color: #ffffff;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .banner .left .features .content h4 {
+        color: #ffffff;
+        font-size: 2em;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .banner .left .features .content span {
+        font-size: 0.4em;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    
+    .banner .left .features .content .subtitle {
+        font-size: 1em;    
+        margin-top: -4em;
+    }
+
+    .banner .left .features .content .meta{
+        font-size: 1em; 
+
+        margin-top: 4em;
+
+    }
+    
+    .banner h1 {
+        color: #ffffff;
+        font-size: 2em;
+        letter-spacing: 5px;
+        line-height: 0.9;
+        z-index: 10;
+        text-transform: uppercase;
+        margin-top: -2em;
+    }
+    
+    .swiper .swiper-wrapper .swiper-slide .banner .right {
+        position: relative;
+        margin-top: 1.5rem;
+        padding-left: 12rem;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        z-index: 100;
+    }
+    
+    .banner .right .description {
+        
+        color: #ffffff
+    }
+    
+    .banner .right .description li {
+        list-style: none;
+        
+    }
+    
+    .banner .right .description h4 {
+        display: inline-block;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .banner .right .description p {
+        margin: 5px 0 25px 30px;
+        font-weight: 300;
+        display: none;
+    }
+    
+    .banner .right h2 {
+        color: #ffffff;
+        font-size: 2em;
+        line-height: 1em;
+        font-weight: 400;
+        text-align: right;
+        text-transform: uppercase;
+        display: none;
+    }
+    .banner .right iframe {
+        max-width: 250px;
+        max-height: 150px;
+        margin-top: -10em;
+        margin-right: 5em ;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .swiper-button-prev {
+        position: absolute; /* Certifique-se de que a posição é absoluta */
+        left: 10px !important;  /* Ajuste para a esquerda */
+        top: 50% !important; /* Ajuste para centralizar verticalmente */
+        transform: translateY(-50%) !important; /* Centralizar verticalmente */
+    }
+
+    .swiper-button-next {
+        position: absolute; /* Certifique-se de que a posição é absoluta */
+        right: 10px !important; /* Ajuste para a direita */
+        top: 60% !important; /* Ajuste para centralizar verticalmente */
+        transform: translateY(-50%) !important; /* Centralizar verticalmente */
+    }
+
+    
+}
+
+/* Tablet Landscape (medium screens) */
+@media only screen and (max-width: 1024px) {
+    header {
+        padding: 20px 60px;
+    }
+
+    .logo img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .search {
+        width: 120px;
+    }
+
+    .swiper-button-prev {
+        margin-left: 28rem;
+    }
+
+    .swiper-button-next {
+        margin-right: 0rem;
+    }
+  
+
+}  
+
 
 .modal{
     display: none;

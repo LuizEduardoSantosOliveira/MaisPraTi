@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    window.menuShow = function() {
+      let menuMobile = document.querySelector('.menu-mobile');
+      menuMobile.classList.toggle('open'); // Alterna a classe 'open' para mostrar ou esconder o menu
+    };
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
         loop: false,
@@ -42,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 
+    
+
     const EmailModalBtn = document.getElementById('openEmailModal');
     const emailModal = document.getElementById('emailModal')
     const closeEmailModal = emailModal.querySelector(".closer")
@@ -50,5 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         emailModal.style.display = 'block';
     })
 
+   
 
 })
