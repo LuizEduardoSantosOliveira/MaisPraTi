@@ -5,6 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
+const loginButton = document.getElementById("loginButton");
+const loginModal = document.getElementById("loginModal");
+const closeButton = document.querySelector(".close-button");
+
+
+loginButton.addEventListener("click", () => {
+  loginModal.style.display = "block";
+});
+
+
+closeButton.addEventListener("click", () => {
+  loginModal.style.display = "none";
+});
+
+
+window.addEventListener("click", (event) => {
+  if (event.target === loginModal) {
+    loginModal.style.display = "none";
+  }
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
@@ -50,15 +72,4 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     
-
-    const EmailModalBtn = document.getElementById('openEmailModal');
-    const emailModal = document.getElementById('emailModal')
-    const closeEmailModal = emailModal.querySelector(".closer")
-
-    EmailModalBtn.addEventListener('click', function (){
-        emailModal.style.display = 'block';
-    })
-
-   
-
 })

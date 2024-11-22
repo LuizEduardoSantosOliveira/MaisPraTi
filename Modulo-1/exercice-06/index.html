@@ -62,9 +62,23 @@
         </ul>
       </nav>
 
-
       <div class="login">
-        <button>Login</button>
+        <button id="loginButton"><i class="fa-solid fa-user"></i></button>
+      </div>
+      
+
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Login</h2>
+          <form id="loginForm">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Entrar</button>
+          </form>
+        </div>
       </div>
 
       <div class="search">
@@ -98,7 +112,7 @@
                       <div class="content">
                         <span class="meta">M E T A S C O R E</span>
                         <h4>Ótimo</h4>
-                        <span>Descrição do Jogo Mario Odyssey</span>
+                        <span class="title-2">jogo de plataforma e aventura estrelado pelo encanador italiano mais conhecido em todo o mundo</span>
                       </div>
                     </div>
                     <div class="pricing">
@@ -106,7 +120,7 @@
                       <div class="content">
                         <span class="subtitle">Super Mario Odyssey</span>
                         <h4>COMPRE AGORA</h4>
-                        <span>Plataforma, Aventura, Ação</span>
+                        <span class="genre">Plataforma, Aventura, Ação</span>
                       </div>
                     </div>
                   </div>
@@ -162,7 +176,7 @@
                                     <!-- Subtítulo com a palavra "Metascore" -->
                                     <h4>Bom</h4>
                                     <!-- Classificação "Bom" -->
-                                    <span>Prepare-se para uma aventura Pokemon!</span>
+                                    <span class="title-2">Prepare-se para uma aventura Pokemon!</span>
                                     <!-- Descrição do jogo -->
                                 </div>
                             </div>
@@ -176,7 +190,7 @@
                                     <!-- Título do jogo -->
                                     <h4>COMPRE AGORA</h4>
                                     <!-- Chamada para compra -->
-                                    <span>Ação, RPG</span>
+                                    <span class="genre">Ação, RPG</span>
                                     <!-- Categorias do jogo -->
                                 </div>
                             </div>
@@ -229,7 +243,7 @@
                       <div class="content">
                         <span class="meta">M E T A S C O R E</span>
                         <h4>Excelente</h4>
-                        <span>
+                        <span class="title-2">
                           Prepare-se para uma aventura no reino de Hyure
                         </span>
                       </div>
@@ -241,7 +255,7 @@
                           The Legend of Zelda Breath of the-Wild</span
                         >
                         <h4>COMPRE AGORA</h4>
-                        <span>Aventura,Ação, RPG</span>
+                        <span class="genre">Aventura,Ação, RPG</span>
                       </div>
                     </div>
                   </div>
@@ -281,13 +295,6 @@
           <div class="swiper-button-next"></div>
         </div>
       </section>
-
-      <div id="emailModal" class="modal">
-        <div class="conteudo">
-          Formulário de contato por emailModal
-          <input type="text" />Nome
-        </div>
-      </div>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <script src="./js/app.js"></script>
     </main>

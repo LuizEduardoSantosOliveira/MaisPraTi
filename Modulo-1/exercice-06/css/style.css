@@ -98,6 +98,70 @@ header {
     font-weight: 300;
 }
 
+.login i{
+    font-size: 3em;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
 .swiper {
     width: 100%;
     height: 100vh;
@@ -131,7 +195,6 @@ header {
 
 .swiper .swiper-wrapper .swiper-slide img {
     display: block;
-    /* position: absolute; */
     width: 100%;
     height: 100%;
     
@@ -168,7 +231,7 @@ header {
 
 .swiper-button-prev,
 .swiper-button-next {
-    position: absolute;  /* Deve ser absoluta para controle preciso da posição */
+    position: absolute;  
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -180,7 +243,7 @@ header {
     margin-left: 43rem;  
 }
 
-/* Botão próximo */
+
 .swiper-button-next {
     margin-right: 4rem;
 }
@@ -193,10 +256,10 @@ header {
 
 }
 
-/* Hover */
+
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    color: #fff;  /* Cor ao passar o mouse */
+    color: #fff;  
 }
 
 
@@ -379,25 +442,26 @@ header {
 
 
 
-    /* Botão do menu móvel */
+    
     .menu-button {
         margin-bottom: 10px;
     }
 
-    /* Menu de navegação */
+   
     .menu-mobile {
-        display: none; /* Menu escondido por padrão */
+        display: none; 
         width: 100%;
         position: fixed;
-        top: 60px; /* Ajuste a posição conforme necessário */
+        top: 60px; 
         left: 0;
-        margin-top: 1rem;
+        margin-top:0;
         background-color: #000;
-        z-index: 100; /* Certifique-se de que o menu está na frente */
+        z-index: 100; 
+
     }
     
     .menu-mobile.open {
-        display: block; /* Exibe o menu quando a classe 'open' é adicionada */
+        display: block; 
     }
     
     .menu-mobile ul {
@@ -426,7 +490,7 @@ header {
     }
     
     .menu-mobile ul li a:hover {
-        color: var(--primary); /* Muda para a cor principal ao passar o mouse */
+        color: var(--primary); 
     }
 
 
@@ -443,7 +507,6 @@ header {
         text-align: center;
     }
 
-    /* Features ajustadas */
     .banner .left .features {
         margin-bottom: 20px;
     }
@@ -475,10 +538,7 @@ header {
        
       }
 
-      .login{
-        display: none;
-      }
-
+      
       
 
     .swiper .swiper-slide {
@@ -522,16 +582,28 @@ header {
         flex-direction: column;
         
     }
-}   
-
+} 
 
 @media only screen and (max-width: 480px) {
     header {
-        background-color: #ff0000;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         overflow: auto;
+       margin-top: -1em;
+    }
+
+    .login i{
+        font-size: 2em
+    }
+
+    .search input{
+        width: 8em;
+       margin-left: 1em;
+    }
+
+    .search:hover{
+        width: 7em
     }
 
     body{
@@ -561,13 +633,6 @@ header {
    
     
 
-    .swiper-button-prev {
-        margin-left: 1rem;
-    }
-
-    .swiper-button-next {
-        margin-right: 1rem;
-    }
 
     .swiper .swiper-slide {
         margin-top: 60px;
@@ -614,6 +679,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        margin-top: -4em;
     }
     
     .banner .left .features {
@@ -624,7 +690,6 @@ header {
     
     .banner .left .features .rating {
         color: #ffffff;
-        /*display: none;*/
         justify-content:center;
         align-items: center;
         margin-bottom: 5rem
@@ -659,6 +724,10 @@ header {
         justify-content: flex-start;
         align-items: center;
     }
+
+    .banner .left .features .content .genre{
+        font-size: 1em;
+    }
     
     .banner .left .features .content h4 {
         color: #ffffff;
@@ -667,6 +736,10 @@ header {
         letter-spacing: 2px;
         text-transform: uppercase;
     }
+
+    .title-2 {
+        font-size: 5em;
+      }
     
     .banner .left .features .content span {
         font-size: 0.4em;
@@ -684,6 +757,10 @@ header {
 
         margin-top: 4em;
 
+    }
+
+    .banner .left .features .content .title-2{
+        font-size: .5em;
     }
     
     .banner h1 {
@@ -710,7 +787,8 @@ header {
     
     .banner .right .description {
         
-        color: #ffffff
+        color: #ffffff;
+        display: none;
     }
     
     .banner .right .description li {
@@ -746,7 +824,7 @@ header {
     .banner .right iframe {
         max-width: 250px;
         max-height: 150px;
-        margin-top: -10em;
+        margin-top: -7em;
         margin-right: 5em ;
         display: flex;
         flex-direction: column;
@@ -754,23 +832,23 @@ header {
     }
 
     .swiper-button-prev {
-        position: absolute; /* Certifique-se de que a posição é absoluta */
-        left: 10px !important;  /* Ajuste para a esquerda */
-        top: 50% !important; /* Ajuste para centralizar verticalmente */
-        transform: translateY(-50%) !important; /* Centralizar verticalmente */
+        position: absolute; 
+        left: -25em !important ;
+        top: 45% ; 
+        transform: translateY(-50%);
+        
     }
 
     .swiper-button-next {
-        position: absolute; /* Certifique-se de que a posição é absoluta */
-        right: 10px !important; /* Ajuste para a direita */
-        top: 60% !important; /* Ajuste para centralizar verticalmente */
-        transform: translateY(-50%) !important; /* Centralizar verticalmente */
+        position: absolute; 
+        right: 10px ;
+        top: 45% ;
+        transform: translateY(-50%);
     }
 
     
 }
 
-/* Tablet Landscape (medium screens) */
 @media only screen and (max-width: 1024px) {
     header {
         padding: 20px 60px;
