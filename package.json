@@ -6,6 +6,7 @@
     "jest": "^29.7.0"
   },
   "dependencies": {
+    "react-hook-form": "^7.54.0",
     "react-router-dom": "^7.0.1"
   }
 }
